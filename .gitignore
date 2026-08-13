@@ -1,0 +1,17 @@
+node_modules
+dist
+dist-ssr
+
+# base de datos y datos locales
+data
+*.db
+*.db-shm
+*.db-wal
+
+# entorno
+.env
+.env.local
+*.local
+
+.DS_Store
+*.log

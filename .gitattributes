@@ -1,0 +1,5 @@
+# Normaliza saltos de línea: LF en el repo (el VPS es Linux).
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.ico binary

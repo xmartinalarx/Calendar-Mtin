@@ -1,0 +1,14 @@
+/* reset mínimo — el resto del estilo vive dentro del componente (CLAUDE.md) */
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  overscroll-behavior: none;
+  background: #eae9fb;
+}

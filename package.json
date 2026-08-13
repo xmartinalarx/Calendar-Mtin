@@ -1,0 +1,29 @@
+{
+  "name": "agenda",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Agenda personal en español: escribes en lenguaje natural y se agenda solo.",
+  "scripts": {
+    "dev": "concurrently -k -n vite,api -c cyan,green \"vite\" \"node --watch server/index.js\"",
+    "build": "vite build",
+    "server": "node server/index.js",
+    "start": "node server/index.js",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "vite": "^6.0.7"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
