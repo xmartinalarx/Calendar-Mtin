@@ -32,20 +32,20 @@ app.use("/api", (req, res, next) => {
   return res.status(401).json({ error: "no autorizado" });
 });
 
-app.get("/api/eventos", (req, res) => {
+app.get("/api/eventos", async (req, res) => {
   try {
-    res.json(listar());
+    res.json(await listar());
   } catch (e) {
     res.status(500).json({ error: String(e.message || e) });
   }
 });
 
-app.post("/api/eventos", (req, res) => {
+app.post("/api/eventos", async (req, res) => {
   if (!Array.isArray(req.body)) {
     return res.status(400).json({ error: "se esperaba un array de eventos" });
   }
   try {
-    const n = reemplazarTodo(req.body);
+    const n = await reemplazarTodo(req.body);
     res.json({ ok: true, n });
   } catch (e) {
     res.status(500).json({ error: String(e.message || e) });
